@@ -46,37 +46,36 @@
                   </table>
                </div>
                <hr>
-			   <div style="border: thin solid black; padding: 20px">
-               <h5>Query Area</h5>
-               <table style="width:100%">
-                  <tr>
-				  <form action="main_page.php" method="POST">
-                     <th style= "border: 1px solid black; padding: 10px">
-                        <label for="labelMessage">Title</label>
-                        <input type="text" name="title" class="form-control" id="title"  placeholder="Enter title">
-                     </th>
-                     <th style= "border: 1px solid black; padding: 10px">
-					 <label for="labelMessage">Artist</label>
-                        <input ype="text" name="artist" class="form-control" id="artist"  placeholder="Enter artist">
-					 </th>
-					 
-                     <th style= "border: 1px solid black; padding: 10px">
-					 <label for="labelMessage">Year</label>
-                        <input type="text" name="year" class="form-control" id="year"  placeholder="Enter year">
-					 </th>
-					 <th style= "border: 1px solid black; padding: 10px">
-					 <label for="labelMessage">Image</label>
-					 </th>
-                     <th style= "border: 1px solid black; padding: 10px">
-                        <button class="btn btn-dark" type="submit">Query</button>
-                     </form>
-					 </th>
-                  </tr>
-				  <?php
-				  include "query.php";
-				  ?>
-               </table>
-			   </div>
+               <div style="border: thin solid black; padding: 20px">
+                  <h5>Query Area</h5>
+                  <table style="width:100%">
+                     <tr>
+                        <form action="main_page.php" method="POST">
+                           <th style= "border: 1px solid black; padding: 10px">
+                              <label for="labelMessage">Title</label>
+                              <input type="text" name="title" class="form-control" id="title"  placeholder="Enter title">
+                           </th>
+                           <th style= "border: 1px solid black; padding: 10px">
+                              <label for="labelMessage">Artist</label>
+                              <input ype="text" name="artist" class="form-control" id="artist"  placeholder="Enter artist">
+                           </th>
+                           <th style= "border: 1px solid black; padding: 10px">
+                              <label for="labelMessage">Year</label>
+                              <input type="text" name="year" class="form-control" id="year"  placeholder="Enter year">
+                           </th>
+                           <th style= "border: 1px solid black; padding: 10px">
+                              <label for="labelMessage">Image</label>
+                           </th>
+                           <th style= "border: 1px solid black; padding: 10px">
+                              <button class="btn btn-dark" type="submit">Query</button>
+                        </form>
+                        </th>
+                     </tr>
+                     <?php
+                        include "query.php";
+                        ?>
+                  </table>
+               </div>
             </div>
          </div>
       </div>
