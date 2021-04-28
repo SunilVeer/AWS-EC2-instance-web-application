@@ -4,10 +4,7 @@ require 'vendor/autoload.php';
 date_default_timezone_set('UTC');
 use Aws\DynamoDb\Exception\DynamoDbException;
 use Aws\DynamoDb\Marshaler;
-$sdk = new Aws\Sdk([
-    'region' => 'us-east-1',
-    'version' => 'latest'
-]);
+$sdk = new Aws\Sdk(['region' => 'us-east-1', 'version' => 'latest']);
 $dynamodb = $sdk->createDynamoDb();
 $marshaler = new Marshaler();
 
@@ -19,17 +16,17 @@ $key = $marshaler->marshalJson('{
 	"title": "' . $_GET['title'] . '"
 }');
 
-$params = [
-            'TableName' => $tableName,	
-            'Key' => $key
-        ];
-		
-try {
-	    $result = $dynamodb->deleteItem($params);
-		header("location: main_page.php");
+$params = ['TableName' => $tableName, 'Key' => $key];
 
-    } catch (DynamoDbException $e) {
-	echo "Unable to get item:\n";
-	echo $e->getMessage() . "\n";
+try
+{
+    $result = $dynamodb->deleteItem($params);
+    header("location: main_page.php");
+
+}
+catch(DynamoDbException $e)
+{
+    echo "Unable to get item:\n";
+    echo $e->getMessage() . "\n";
 }
 ?>
